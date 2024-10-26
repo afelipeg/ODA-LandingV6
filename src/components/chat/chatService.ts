@@ -2,7 +2,7 @@ import { Message } from './types';
 import Anthropic from '@anthropic-ai/sdk';
 
 const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY
+  apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY
 });
 
 const SYSTEM_PROMPT = `You are an expert Customer Success representative for ODA (On Demand Agentcy), helping users understand Agentcy's capabilities.
