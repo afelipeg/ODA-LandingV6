@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODA - On-Demand-Agentcy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Netlify Form -->
+    <form name="betasignup" netlify netlify-honeypot="botfield" hidden>
+      <input type="text" name="fullname" />
+      <input type="email" name="workemail" />
+      <input type="text" name="companyname" />
+      <input type="text" name="userrole" />
+      <input type="hidden" name="botfield" />
+    </form>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
