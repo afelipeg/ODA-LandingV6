@@ -44,18 +44,24 @@ const AgentChat = () => {
       timestamp: new Date()
     };
 
+    // Primero actualizamos el estado con el mensaje del usuario
     dispatch({ type: 'ADD_MESSAGE', payload: userMessage });
     dispatch({ type: 'SET_LOADING', payload: true });
     setInputMessage('');
 
     try {
+      // Creamos un array actualizado con todos los mensajes incluyendo el nuevo
+      const updatedMessages = [...state.messages, userMessage];
+      
+      // Enviamos todos los mensajes al servicio
       const response = await generateResponse(
-        state.messages.map(msg => ({
+        updatedMessages.map(msg => ({
           role: msg.role,
           content: msg.content
         }))
       );
 
+      // Añadimos la respuesta del asistente
       dispatch({
         type: 'ADD_MESSAGE',
         payload: {
@@ -66,6 +72,7 @@ const AgentChat = () => {
         }
       });
     } catch (error) {
+      console.error('Error:', error);
       dispatch({
         type: 'SET_ERROR',
         payload: 'Lo siento, hubo un problema al procesar tu mensaje. Por favor, intenta de nuevo.'
