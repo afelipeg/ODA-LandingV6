@@ -12,13 +12,13 @@ import {
 const agents = [
   {
     icon: BarChart,
-    title: 'Media Planning Copilot',
-    description: 'Optimize your media mix across channels with AI-driven insights and automated planning tools.'
+    title: 'ON-OFF Media Planning Agent',
+    description: 'Optimize, maximize your media mix across channels & build flows with AI-driven insights and automated planning tools.'
   },
   {
     icon: PieChart,
     title: 'Analytics Agent',
-    description: 'Transform raw data into actionable insights with automated BI reporting and predictive analytics.'
+    description: 'Build maximization and full funnel models using multi-agent patterns with >97 accuracy.'
   },
   {
     icon: Users,
@@ -27,18 +27,18 @@ const agents = [
   },
   {
     icon: FileSpreadsheet,
-    title: 'Finance Assistant',
-    description: 'Automate invoicing, track budgets, and manage SOWs with precision and efficiency.'
+    title: 'Account Management Agent',
+    description: 'Automate project tracking, budgets, and manage SOWs with precision and efficiency.'
   },
   {
     icon: Target,
     title: 'CRM & RFM Agent',
-    description: 'Enhance customer relationships with AI-powered segmentation and full-funnel optimization.'
+    description: 'Enhance customer relationships with agentic AI-powered for CRM, RFM analysis and design audience journeys for growth loops.'
   },
   {
     icon: Lightbulb,
     title: 'Creative Agent',
-    description: 'Generate innovative campaign concepts and creative strategies from briefs using AI-powered ideation and market trend analysis.'
+    description: 'Generate big ideas campaign concepts and creative strategies from briefs using AI-powered ideation and market trend analysis.'
   }
 ];
 
@@ -59,7 +59,7 @@ function Agents() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Meet Your AI Agents</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our specialized AI copilots handle complex agency tasks with precision and efficiency
+            Our specialized Agentic AI patterns based on RAG handle complex agency tasks with precision and efficiency
           </p>
         </div>
 
