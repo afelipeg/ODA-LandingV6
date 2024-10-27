@@ -44,7 +44,7 @@ function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button 
             onClick={() => scrollToSection('beta')}
-            className="flex items-center px-8 py-4 bg-white text-black rounded-lg hover:bg-gray-100 transition-colors"
+            className="flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors"
           >
             Request a demo
             <ArrowRight className="ml-2 h-5 w-5" />
