@@ -21,7 +21,7 @@ function Video() {
               allow="fullscreen" 
               allowFullScreen 
               height="100%" 
-              src="https://streamable.com/1eqdnr?" 
+              src="https://shorturl.at/gikqI?" 
               width="100%" 
               style={{
                 border:'none', 
