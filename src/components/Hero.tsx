@@ -8,17 +8,10 @@ function Hero() {
     threshold: 0.1,
   });
 
-  const scrollToChat = () => {
-    const chatSection = document.getElementById('chat');
-    if (chatSection) {
-      chatSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToCalculator = () => {
-    const calculatorSection = document.getElementById('calculator');
-    if (calculatorSection) {
-      calculatorSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -49,22 +42,22 @@ function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="#beta" 
+          <button 
+            onClick={() => scrollToSection('beta')}
             className="flex items-center px-8 py-4 bg-white text-black rounded-lg hover:bg-gray-100 transition-colors"
           >
             Request a demo
             <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
+          </button>
           <button 
-            onClick={scrollToChat}
+            onClick={() => scrollToSection('chat')}
             className="flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors"
           >
-            Ask to agentcy
+            Chat with AI Agent
             <MessageSquare className="ml-2 h-5 w-5" />
           </button>
           <button 
-            onClick={scrollToCalculator}
+            onClick={() => scrollToSection('calculator')}
             className="flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors"
           >
             Calculate the impact
