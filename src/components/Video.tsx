@@ -18,6 +18,9 @@ function Video() {
     if (e.key === 'u' && (e.ctrlKey || e.metaKey)) {
       e.preventDefault();
     }
+    if (e.key === 'p' && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+    }
   };
 
   React.useEffect(() => {
@@ -58,6 +61,7 @@ function Video() {
                 overflow:'hidden'
               }}
               onContextMenu={(e) => e.preventDefault()} // Disable right-click on the iframe
+              sandbox="allow-same-origin allow-scripts allow-popups" // Add sandbox to restrict iframe actions
             />
           </div>
         </div>
