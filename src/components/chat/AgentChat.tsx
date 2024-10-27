@@ -105,10 +105,10 @@ const AgentChat = () => {
       >
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Descubre el poder de nuestros Agentes IA
+            Got questions? No question is too big or too small for Agentic-AI Customer Success
           </h2>
           <p className="text-xl text-gray-300">
-            Optimiza tu agencia con nuestra arquitectura RAG personalizada
+            Ask us anything before booking your demo – we're here to help you every step of the way
           </p>
         </div>
 
