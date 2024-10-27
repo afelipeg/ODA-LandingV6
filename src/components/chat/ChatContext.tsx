@@ -5,7 +5,15 @@ const initialState: ChatState = {
   messages: [{
     id: '1',
     role: 'assistant',
-    content: "Hi! I'm your Agentcy assistant. How can I help you today?",
+    content: `¡Hola! Soy el asistente especializado de ODA (On-Demand-Agentcy). 
+Puedo ayudarte a explorar cómo nuestros agentes especializados con arquitectura RAG pueden transformar tu agencia:
+- Media Planning Copilot
+- Analytics Agent
+- Operations Manager
+- Finance Assistant
+- CRM & RFM Agent
+- Creative Agent
+¿Sobre qué área te gustaría saber más?`,
     timestamp: new Date()
   }],
   isLoading: false,
@@ -44,13 +52,34 @@ function chatReducer(state: ChatState, action: ChatAction): ChatState {
         ...initialState,
         userInfo: state.userInfo
       };
+    case 'UPDATE_MESSAGES':
+      return {
+        ...state,
+        messages: action.payload
+      };
     default:
       return state;
   }
 }
 
 export function ChatProvider({ children }: ChatProviderProps) {
-  const [state, dispatch] = useReducer(chatReducer, initialState);
+  const [state, dispatch] = useReducer(chatReducer, {
+    ...initialState,
+    messages: [{
+      id: '1',
+      role: 'assistant',
+      content: `¡Hola! Soy el agente especializado de ODA (On-Demand-Agentcy). 
+Puedo ayudarte a explorar cómo nuestros agentes especializados con arquitectura RAG y frameworks agentic pueden transformar tu agencia:
+- Media Planning Agents
+- Analytics Agent
+- Operations Manager
+- Finance Assistant
+- CRM & RFM Agent
+- Creative Agent
+¿Sobre qué área te gustaría saber más?`,
+      timestamp: new Date()
+    }]
+  });
 
   return (
     <ChatContext.Provider value={{ state, dispatch }}>
