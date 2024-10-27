@@ -11,10 +11,21 @@ function Video() {
     e.preventDefault();
   };
 
+  const preventKeyDownloads = (e) => {
+    if (e.key === 's' && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+    }
+    if (e.key === 'u' && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+    }
+  };
+
   React.useEffect(() => {
     document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', preventKeyDownloads);
     return () => {
       document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', preventKeyDownloads);
     };
   }, []);
 
