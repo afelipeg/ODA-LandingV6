@@ -28,7 +28,7 @@ function Hero() {
         </h3>
         
         <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-          Redefine Agency Excellence: Convert Traditional Teams into AI Agentic-Powered Superteams - Delivering Premium Results at >70% Lower Costs and Time - Unlock >21% New Revenue Generation. 
+          Redefine Agency Excellence: Convert Traditional Teams into AI Agentic-Powered Superteams - Delivering Premium Results at 70% Lower Costs and Time - Unlock 21% New Revenue Generation. 
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
