@@ -50,10 +50,10 @@ function Hero() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </button>
           <button 
-            onClick={() => scrollToSection('agentchat')}
+            onClick={() => scrollToSection('chatcontext')}
             className="flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors"
           >
-            Chat with AI Agent
+            Chat with Sales Agent
             <MessageSquare className="ml-2 h-5 w-5" />
           </button>
           <button 
